@@ -15,7 +15,7 @@ function App() {
   return (
     <div className='bg-black text-white min-h-screen'>
       <Navbar />
-      <main>
+      <main className="pb-24">
         <Element name="home" id="home"><Hero /></Element>
         <Element name="about"><About /></Element>
         <Element name="skills"><Skills /></Element>

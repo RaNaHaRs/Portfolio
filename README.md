@@ -15,6 +15,14 @@ Web3Forms recipient verification or activation may be required before messages
 can be delivered. Until a valid key is configured and delivery is tested, the
 form shows an unavailable message and visitors can use the public email link.
 
+## Portfolio Assistant
+
+The Portfolio Assistant uses local Fuse.js search over the portfolio's
+structured profile, skills, experience, project, timeline, and public-contact
+data. It does not send visitor questions to an AI service or backend. It answers
+only portfolio-related questions, distinguishes undocumented details from
+out-of-scope requests, and does not persist chat history.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

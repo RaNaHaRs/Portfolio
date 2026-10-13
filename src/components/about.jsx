@@ -7,6 +7,7 @@ import {
   GraduationCap,
   School,
 } from 'lucide-react';
+import { portfolioProfile } from '../data/knowladgebase';
 import './About.css';
 
 const statistics = [
@@ -61,9 +62,9 @@ function About() {
               transition={{ duration: 0.6, delay: 0.08 }}
             >
               <p>
-                I&apos;m Harsh Rana, an Information Technology student at A.D.
-                Patel Institute of Technology, CVM University, graduating in
-                2027.
+                I&apos;m {portfolioProfile.name}, studying {portfolioProfile.degree} at{' '}
+                {portfolioProfile.institute}, {portfolioProfile.university}, graduating in{' '}
+                {portfolioProfile.graduationYear}.
               </p>
               <p>
                 My journey into software development started after Class 12,
@@ -97,10 +98,7 @@ function About() {
               variants={reveal}
               transition={{ duration: 0.5, delay: 0.12 }}
             >
-              <span className="about-goal-label">My goal:</span> To become a
-              Java Specialist with strong expertise in backend engineering,
-              system design, distributed systems, and scalable enterprise
-              software.
+              <span className="about-goal-label">My goal:</span> {portfolioProfile.careerGoal}
             </motion.p>
           </div>
 
@@ -116,14 +114,14 @@ function About() {
               <div className="about-card-topline">
                 <span className="about-card-icon"><GraduationCap size={20} /></span>
                 <span className="about-card-label">EDUCATION</span>
-                <span className="about-card-year">2027</span>
+                <span className="about-card-year">{portfolioProfile.graduationYear}</span>
               </div>
 
               <div className="about-profile">
                 <div className="about-avatar" aria-hidden="true">HR</div>
                 <div>
-                  <h3>Harsh Rana</h3>
-                  <p>B.Tech in Information Technology</p>
+                  <h3>{portfolioProfile.name}</h3>
+                  <p>{portfolioProfile.degree}</p>
                 </div>
               </div>
 
@@ -132,15 +130,15 @@ function About() {
               <dl className="about-education-details">
                 <div>
                   <dt><School size={15} aria-hidden="true" /> Institute</dt>
-                  <dd>A.D. Patel Institute of Technology</dd>
+                  <dd>{portfolioProfile.institute}</dd>
                 </div>
                 <div>
                   <dt><Building2 size={15} aria-hidden="true" /> University</dt>
-                  <dd>CVM University</dd>
+                  <dd>{portfolioProfile.university}</dd>
                 </div>
                 <div className="about-cgpa">
                   <dt><Award size={15} aria-hidden="true" /> CGPA</dt>
-                  <dd>7.82</dd>
+                  <dd>{portfolioProfile.cgpa}</dd>
                 </div>
               </dl>
             </motion.article>
