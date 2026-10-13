@@ -1,0 +1,550 @@
+.about-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(5rem, 8vw, 7.5rem) 2rem clamp(4.5rem, 7vw, 6.5rem);
+  color: #f8fafc;
+  text-align: left;
+  background:
+    radial-gradient(ellipse at 16% 30%, rgba(95, 61, 190, 0.1), transparent 37%),
+    radial-gradient(ellipse at 87% 62%, rgba(20, 125, 170, 0.09), transparent 38%),
+    #070b16;
+  scroll-margin-top: 5rem;
+}
+
+.about-glow {
+  position: absolute;
+  z-index: -1;
+  width: 23rem;
+  height: 23rem;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  opacity: 0.11;
+}
+
+.about-glow--left {
+  top: 7%;
+  left: -18rem;
+  background: #8b5cf6;
+}
+
+.about-glow--right {
+  right: -17rem;
+  bottom: 4%;
+  background: #22d3ee;
+}
+
+.about-container {
+  width: min(100%, 1280px);
+  margin-inline: auto;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+  align-items: start;
+  gap: clamp(2.75rem, 6vw, 6.25rem);
+}
+
+.about-introduction {
+  min-width: 0;
+}
+
+.about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 1.15rem;
+  color: #8fdcf0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.about-eyebrow::before {
+  width: 1.65rem;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+}
+
+.about-heading {
+  max-width: 680px;
+  margin: 0;
+  color: #f4f7ff;
+  font-size: clamp(2.25rem, 4.1vw, 3.65rem);
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.052em;
+}
+
+.about-heading span {
+  color: #9c8cff;
+  background: linear-gradient(100deg, #a78bfa 8%, #7c9bff 56%, #67e8f9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-biography {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.65rem;
+}
+
+.about-biography p {
+  margin: 0;
+  color: #a8b5cf;
+  font-size: 0.98rem;
+  line-height: 1.82;
+}
+
+.about-goal {
+  position: relative;
+  margin: 1.5rem 0 0;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-left: 2px solid #8b5cf6;
+  border-radius: 0.8rem;
+  padding: 1rem 1.15rem;
+  color: #c7d4ec;
+  background: linear-gradient(105deg, rgba(87, 61, 154, 0.16), rgba(24, 54, 84, 0.18));
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.about-goal-label {
+  color: #c4b5fd;
+  font-weight: 700;
+}
+
+.about-details {
+  display: grid;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+
+.about-education-card,
+.about-stat-card {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(145deg, rgba(14, 23, 42, 0.96), rgba(9, 16, 30, 0.97)) padding-box,
+    linear-gradient(140deg, rgba(139, 92, 246, 0.42), rgba(59, 130, 246, 0.22) 52%, rgba(34, 211, 238, 0.3)) border-box;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.19);
+}
+
+.about-education-card {
+  border-radius: 1.1rem;
+  padding: clamp(1.15rem, 2vw, 1.5rem);
+  transition: box-shadow 180ms ease;
+}
+
+.about-education-card:hover {
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.26), 0 0 24px rgba(92, 105, 227, 0.08);
+}
+
+.about-internship-card {
+  border: 1px solid rgba(91, 145, 201, 0.24);
+  border-radius: 0.95rem;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, rgba(14, 26, 44, 0.88), rgba(10, 19, 34, 0.92));
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.15);
+}
+
+.about-internship-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.about-internship-icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.62rem;
+  color: #8de5ed;
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.about-internship-heading h3 {
+  margin: 0;
+  color: #e6eefb;
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.about-internship-heading p {
+  margin: 0.2rem 0 0;
+  color: #93a3bf;
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.about-internship-date {
+  margin-left: auto;
+  color: #abbad3;
+  font-size: 0.68rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.about-internship-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-internship-tech li {
+  border: 1px solid rgba(128, 151, 194, 0.17);
+  border-radius: 999px;
+  padding: 0.25rem 0.52rem;
+  color: #aebdd5;
+  background: rgba(20, 31, 51, 0.64);
+  font-size: 0.66rem;
+  line-height: 1.25;
+}
+
+.about-card-topline {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.about-card-icon,
+.about-stat-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  color: #a99aff;
+  background: rgba(139, 92, 246, 0.13);
+}
+
+.about-card-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.68rem;
+}
+
+.about-card-label {
+  color: #a9b9d5;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.about-card-year {
+  margin-left: auto;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  color: #9deafa;
+  background: rgba(34, 211, 238, 0.07);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.about-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.about-avatar {
+  display: grid;
+  width: 3.55rem;
+  height: 3.55rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(131, 154, 255, 0.55);
+  border-radius: 1rem;
+  color: #e0e7ff;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(34, 211, 238, 0.3), transparent 52%),
+    linear-gradient(145deg, rgba(139, 92, 246, 0.45), rgba(35, 65, 124, 0.45));
+  box-shadow: 0 0 24px rgba(98, 110, 245, 0.13);
+  font-size: 1.08rem;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+}
+
+.about-profile h3 {
+  margin: 0;
+  color: #f5f7ff;
+  font-size: 1.22rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.about-profile p {
+  margin: 0.3rem 0 0;
+  color: #a8b5cf;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.about-education-divider {
+  height: 1px;
+  margin: 1.25rem 0;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.3), rgba(126, 163, 220, 0.1), transparent);
+}
+
+.about-education-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.9rem 1rem;
+  margin: 0;
+}
+
+.about-education-details > div {
+  min-width: 0;
+}
+
+.about-education-details dt {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #91a2c0;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.about-education-details dt svg {
+  flex: 0 0 auto;
+  color: #8f9bea;
+}
+
+.about-education-details dd {
+  margin: 0.3rem 0 0;
+  color: #e0e8f7;
+  font-size: 0.84rem;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.about-education-details .about-cgpa {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  min-width: 4.6rem;
+  border: 1px solid rgba(34, 211, 238, 0.17);
+  border-radius: 0.75rem;
+  padding: 0.55rem 0.65rem;
+  background: rgba(34, 211, 238, 0.055);
+}
+
+.about-cgpa dd {
+  color: #9cebf5;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.about-statistics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.about-stat-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: 0.65rem;
+  min-height: 5rem;
+  border-radius: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  transition: box-shadow 180ms ease;
+}
+
+.about-stat-card:hover {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26), 0 0 22px rgba(34, 211, 238, 0.07);
+}
+
+.about-stat-icon {
+  grid-row: 1 / span 2;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.65rem;
+  color: #81dced;
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.about-stat-value {
+  color: #f4f7ff;
+  font-size: 1.25rem;
+  font-weight: 720;
+  line-height: 1.1;
+}
+
+.about-stat-label {
+  align-self: start;
+  margin-top: 0.18rem;
+  color: #93a3bf;
+  font-size: 0.72rem;
+  line-height: 1.35;
+}
+
+.about-focus {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: clamp(2.75rem, 5vw, 4.25rem);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 1.05rem 1.25rem;
+  background:
+    linear-gradient(110deg, rgba(13, 20, 36, 0.9), rgba(10, 21, 36, 0.88)) padding-box,
+    linear-gradient(100deg, rgba(139, 92, 246, 0.35), rgba(59, 130, 246, 0.2), rgba(34, 211, 238, 0.28)) border-box;
+}
+
+.about-focus-heading {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.6rem;
+  color: #9fe6f3;
+}
+
+.about-focus-heading h3 {
+  margin: 0;
+  color: #dbe8fb;
+  font-size: 0.88rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.about-focus-list {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-focus-list li {
+  border: 1px solid rgba(116, 150, 203, 0.17);
+  border-radius: 999px;
+  padding: 0.43rem 0.75rem;
+  color: #b9c8df;
+  background: rgba(20, 31, 51, 0.72);
+  font-size: 0.75rem;
+  font-weight: 550;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    padding-inline: 1.5rem;
+  }
+
+  .about-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    gap: 2.25rem;
+  }
+
+  .about-biography p {
+    font-size: 0.93rem;
+  }
+
+  .about-focus {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .about-section {
+    padding: 5rem 1.25rem;
+  }
+
+  .about-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .about-details {
+    width: min(100%, 560px);
+    margin-inline: auto;
+  }
+
+  .about-focus {
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 2.5rem;
+    padding: 1rem;
+  }
+
+  .about-focus-list {
+    gap: 0.48rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 4.25rem 1rem;
+  }
+
+  .about-heading {
+    font-size: clamp(2.15rem, 10.5vw, 2.8rem);
+  }
+
+  .about-biography {
+    gap: 0.9rem;
+    margin-top: 1.25rem;
+  }
+
+  .about-biography p {
+    font-size: 0.91rem;
+    line-height: 1.75;
+  }
+
+  .about-goal {
+    padding: 0.9rem;
+    font-size: 0.86rem;
+  }
+
+  .about-education-card {
+    padding: 1rem;
+  }
+
+  .about-education-details dd {
+    font-size: 0.78rem;
+  }
+
+  .about-statistics {
+    gap: 0.65rem;
+  }
+
+  .about-stat-card {
+    min-height: 4.7rem;
+    column-gap: 0.5rem;
+    padding: 0.68rem;
+  }
+
+  .about-stat-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .about-stat-value {
+    font-size: 1.12rem;
+  }
+
+  .about-stat-label {
+    font-size: 0.68rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-education-card,
+  .about-stat-card {
+    transition: none;
+  }
+}
