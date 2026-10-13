@@ -22,8 +22,10 @@ function App() {
         <Element name="experience"><Experience /></Element>
         <Element name="projects" id="projects"><Projects /></Element>
         <Element name="journey" id="journey"><Timeline /></Element>
-        <Element name="contact" id="contact"><Contact /></Element>
-        <ContactForm />
+        <Element name="contact" id="contact">
+          <Contact />
+          <ContactForm />
+        </Element>
       </main>
       <AiAssistance />
       <Footer />

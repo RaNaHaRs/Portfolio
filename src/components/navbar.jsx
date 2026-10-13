@@ -49,7 +49,24 @@ function Navbar() {
               Journey
             </a>
           </li>
-          <li><ScrollLink to="contact" smooth duration={500} offset={-80} spy activeClass="text-green-500">Contact</ScrollLink></li>
+          <li>
+            <a
+              href="#contact"
+              className="rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+              onClick={(event) => {
+                event.preventDefault();
+                const section = document.getElementById('contact');
+
+                if (section) {
+                  const top = section.getBoundingClientRect().top + window.scrollY - 80;
+                  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                  window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+                }
+              }}
+            >
+              Contact
+            </a>
+          </li>
           <li><a href={resume} download>Resume</a></li>
         </ul>
       </div>

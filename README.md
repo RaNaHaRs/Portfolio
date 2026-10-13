@@ -1,5 +1,20 @@
 # React + Vite
 
+## Contact form setup
+
+The contact form uses [Web3Forms](https://web3forms.com/) and sends submissions
+to the inbox associated with its access key. Generate an access key for
+`hr160383@gmail.com`, then set `VITE_WEB3FORMS_ACCESS_KEY` in your local
+environment (copy `.env.example` to `.env.local` and add the key) and in the
+Vercel project's Environment
+Variables for Production, Preview, and Development as needed. Redeploy after
+changing the Vercel variable.
+
+The access key is a public client-side identifier, not a server-side secret.
+Web3Forms recipient verification or activation may be required before messages
+can be delivered. Until a valid key is configured and delivery is tested, the
+form shows an unavailable message and visitors can use the public email link.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
